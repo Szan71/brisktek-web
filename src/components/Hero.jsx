@@ -1,19 +1,28 @@
-import React from 'react';
+import React from "react";
 
 const Hero = () => {
   return (
     <section className="relative w-full min-h-[893px] flex flex-col items-center pt-[145px] bg-white overflow-hidden rounded-[36px]">
-      
       {/* 1. Hero Content */}
-      <div className="relative z-20 text-center px-[45px] max-w-[1920px]">
-        <h1 className="text-[84px] text-brisk-navy-100 leading-[1.1] mb-[105px] tracking-tight">
-          Your Vision, <br /> Our Technology
+      <div className="relative z-20 text-center px-5 sm:px-10 lg:px-[45px] max-w-[1920px] mx-auto">
+        {/* Main Heading: 
+      - Fluid font sizing from text-4xl (mobile) to 84px (desktop)
+      - Responsive margins to prevent "ugly" squashing on smaller screens 
+  */}
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[84px] font-medium text-brisk-navy-100 leading-[1.1] mb-12 md:mb-[105px] tracking-tight font-['Inter']">
+          Your Vision, <br className="hidden sm:block" /> Our Technology
         </h1>
-        <p className="max-w-[850px] mx-auto text-slate-500 text-[24px] leading-[130%] mb-[60px]">
-          Empowering businesses and buildings with future-ready technology that works — 
-          seamlessly, securely, and efficiently.
+
+        {/* Subtext:
+      - Scaled from text-base to 24px
+      - max-w maintained for optimal readability line-lengths
+  */}
+        <p className="max-w-[850px] mx-auto text-slate-500 text-base sm:text-lg md:text-[24px] leading-[130%] mb-10 md:mb-[60px]">
+          Empowering businesses and buildings with future-ready technology that
+          works — seamlessly, securely, and efficiently.
         </p>
-        <button className="
+        <button
+          className="
           relative
           inline-flex items-center justify-center
           px-[40px] py-[24px] 
@@ -38,7 +47,8 @@ const Hero = () => {
           /* Hover state */
           hover:bg-white/20
           hover:scale-[1.02]
-        ">
+        "
+        >
           Get more info
         </button>
       </div>
@@ -46,20 +56,18 @@ const Hero = () => {
       {/* 2. THE RUGBY BALL GROUP (Restored visibility for Brisk Navy) */}
       <div className="absolute bottom-[-900px] left-1/2 -translate-x-1/2 w-[2334px] h-[1380px] pointer-events-none z-10">
         <div className="relative w-full h-full">
-          
           {/* Layer 4: White Base Base (2334 x 1380) - #FFFFFF, Blur 4 */}
           <div className="absolute inset-0 bg-white rounded-[100%] blur-[4px] opacity-10"></div>
-          
+
           {/* Layer 8: Brisk Navy Core (2014 x 1020) - #171F3B, Blur 160 */}
           {/* Placed here to be visible through the lighter blurs */}
           <div className="absolute top-[280px] left-1/2 -translate-x-1/2 w-[2014px] h-[1020px] bg-brisk-navy-100 rounded-[100%] blur-[160px] opacity-100 z-10"></div>
-          
+
           {/* Layer 5: Pink Glow (2072 x 1225) - #FBAAFD, Blur 80 */}
           <div className="absolute top-[80px] left-1/2 -translate-x-1/2 w-[2072px] h-[1225px] bg-sphere-pink rounded-[100%] blur-[80px] opacity-40"></div>
 
           {/* Layer 6: Vibrant Blue (2014 x 1020) - #6536FF, Blur 160 */}
           <div className="absolute top-[150px] left-1/2 -translate-x-1/2 w-[2014px] h-[1020px] bg-sphere-blue rounded-[100%] blur-[160px] opacity-70"></div>
-          
         </div>
       </div>
     </section>
