@@ -1,4 +1,12 @@
 import React from 'react';
+import BusinessSol1 from '../assets/BusinessSol1.png';
+import BusinessSol2 from '../assets/BusinessSol2.png';
+import BusinessSol3 from '../assets/BusinessSol3.png';
+import Chain from '../assets/chain.png';
+import stratabuilding from '../assets/stratabuilding.png';
+import infrasetup from '../assets/infrasetup.png'
+import cursor from '../assets/arrow.png'
+
 
 const BusinessSolutions = () => {
   return (
@@ -44,13 +52,13 @@ const BusinessSolutions = () => {
             {/* Image container replica */}
             <div className="w-full lg:w-[50%] h-[400px] md:h-[600px] overflow-visible relative order-1 lg:order-2">
               <img 
-                src="/images/BusinessSol1.png" 
+                src={BusinessSol1} 
                 alt="Website Development" 
                 className="h-full w-full object-cover rounded-[36px]"
               />
               {/* Floating cursor element replica */}
               <img 
-                src="/cursor-icon.png" 
+                src={cursor} 
                 alt="" 
                 className="absolute -bottom-10 -right-10 w-32 h-32 hidden md:block" 
               />
@@ -72,7 +80,7 @@ const BusinessSolutions = () => {
             </div>
             <div className="w-full lg:w-[50%] h-[400px] md:h-[600px] overflow-hidden order-1">
               <img 
-                src="/images/BusinessSol2.png" 
+                src={BusinessSol2} 
                 alt="IT Consulting" 
                 className="h-full w-full object-cover rounded-[36px]"
               />
@@ -94,13 +102,13 @@ const BusinessSolutions = () => {
             </div>
             <div className="w-full lg:w-[50%] h-[400px] md:h-[600px] overflow-visible relative order-1 lg:order-2">
               <img 
-                src="/images/BusinessSol3.png" 
+                src={BusinessSol3}  
                 alt="Computer Support" 
                 className="h-full w-full object-cover rounded-[36px]"
               />
               {/* Floating chain element replica */}
               <img 
-                src="/images/chain.png" 
+                src={Chain} 
                 alt="" 
                 className="absolute -bottom-15 -left-12 w-50 h-50 hidden md:block" 
               />
@@ -153,7 +161,7 @@ const BusinessSolutions = () => {
             </span>
             <div className="mb-8 overflow-hidden rounded-2xl h-[240px] md:h-[280px]">
               <img 
-                src="/images/stratabuilding.png" 
+                src={stratabuilding}
                 alt="Strata Buildings" 
                 className="h-full w-full object-cover"
               />
@@ -173,7 +181,7 @@ const BusinessSolutions = () => {
             </span>
             <div className="mb-8 overflow-hidden rounded-2xl h-[240px] md:h-[280px]">
               <img 
-                src="/images/infrasetup.png" 
+                src={infrasetup} 
                 alt="Infrastructure Setup" 
                 className="h-full w-full object-cover"
               />
