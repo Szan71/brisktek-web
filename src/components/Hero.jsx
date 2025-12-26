@@ -22,9 +22,18 @@ const Hero = () => {
           works — seamlessly, securely, and efficiently.
         </p>
         <div className="flex justify-center">
-    <button className="rounded-full bg-white/20 backdrop-blur-md border border-white/30 px-8 py-4 text-white font-medium transition-all hover:bg-white/30">
+    {/* RESPONSIVE BUTTON: 
+      - Mobile/Small: Dark background (brisk-navy) for visibility on white background
+      - Medium/Large: Semi-transparent white backdrop-blur as per Figma
+  */}
+  <div className="flex justify-center">
+    <button className="rounded-full px-8 py-4 font-medium transition-all active:scale-95
+      bg-brisk-navy-100 text-white 
+      md:bg-white/20 md:backdrop-blur-md md:border md:border-white/30 md:text-white 
+      hover:md:bg-white/30">
       Get more info
     </button>
+  </div>
   </div>
       </div>
 
