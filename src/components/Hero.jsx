@@ -21,36 +21,11 @@ const Hero = () => {
           Empowering businesses and buildings with future-ready technology that
           works — seamlessly, securely, and efficiently.
         </p>
-        <button
-          className="
-          relative
-          inline-flex items-center justify-center
-          px-[40px] py-[24px] 
-          rounded-[100px] 
-          font-bold text-[18px] 
-          text-white
-          transition-all duration-300
-          cursor-pointer
-          
-          /* Background: White at 10% Opacity */
-          bg-white/10
-          
-          /* Glass Core: Blur effect */
-          backdrop-blur-[12px]
-          
-          /* Border: Subtle white definition */
-          border border-white/20
-          
-          /* Shadow: Soft elevation */
-          shadow-lg
-          
-          /* Hover state */
-          hover:bg-white/20
-          hover:scale-[1.02]
-        "
-        >
-          Get more info
-        </button>
+        <div className="flex justify-center">
+    <button className="rounded-full bg-white/20 backdrop-blur-md border border-white/30 px-8 py-4 text-white font-medium transition-all hover:bg-white/30">
+      Get more info
+    </button>
+  </div>
       </div>
 
       {/* 2. THE RUGBY BALL GROUP (Restored visibility for Brisk Navy) */}

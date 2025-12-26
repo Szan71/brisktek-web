@@ -44,7 +44,7 @@ const BusinessSolutions = () => {
             {/* Image container replica */}
             <div className="w-full lg:w-[50%] h-[400px] md:h-[600px] overflow-visible relative order-1 lg:order-2">
               <img 
-                src="/src/assets/BusinessSol1.png" 
+                src="/images/BusinessSol1.png" 
                 alt="Website Development" 
                 className="h-full w-full object-cover rounded-[36px]"
               />
@@ -72,7 +72,7 @@ const BusinessSolutions = () => {
             </div>
             <div className="w-full lg:w-[50%] h-[400px] md:h-[600px] overflow-hidden order-1">
               <img 
-                src="/src/assets/BusinessSol2.png" 
+                src="/images/BusinessSol2.png" 
                 alt="IT Consulting" 
                 className="h-full w-full object-cover rounded-[36px]"
               />
@@ -94,13 +94,13 @@ const BusinessSolutions = () => {
             </div>
             <div className="w-full lg:w-[50%] h-[400px] md:h-[600px] overflow-visible relative order-1 lg:order-2">
               <img 
-                src="/src/assets/BusinessSol3.png" 
+                src="/images/BusinessSol3.png" 
                 alt="Computer Support" 
                 className="h-full w-full object-cover rounded-[36px]"
               />
               {/* Floating chain element replica */}
               <img 
-                src="/src/assets/chain.png" 
+                src="/images/chain.png" 
                 alt="" 
                 className="absolute -bottom-15 -left-12 w-50 h-50 hidden md:block" 
               />
@@ -153,7 +153,7 @@ const BusinessSolutions = () => {
             </span>
             <div className="mb-8 overflow-hidden rounded-2xl h-[240px] md:h-[280px]">
               <img 
-                src="/src/assets/stratabuilding.png" 
+                src="/images/stratabuilding.png" 
                 alt="Strata Buildings" 
                 className="h-full w-full object-cover"
               />
@@ -173,7 +173,7 @@ const BusinessSolutions = () => {
             </span>
             <div className="mb-8 overflow-hidden rounded-2xl h-[240px] md:h-[280px]">
               <img 
-                src="/src/assets/infrasetup.png" 
+                src="/images/infrasetup.png" 
                 alt="Infrastructure Setup" 
                 className="h-full w-full object-cover"
               />
