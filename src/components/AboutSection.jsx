@@ -6,9 +6,11 @@ const AboutSection = () => {
       id="aboutus"
       className="relative z-30 w-full overflow-hidden bg-white"
     >
-      <div 
-      className="mx-auto max-w-[1920px]"
-      style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 100%)" }}
+      <div
+        className="mx-auto max-w-[1920px]"
+        style={{
+          background: "linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 100%)",
+        }}
       >
         {/* PART 1: INTRO TEXT */}
         <div className="px-[5%] py-20 md:py-32 lg:px-[120px] lg:py-40">
@@ -64,11 +66,12 @@ const AboutSection = () => {
                 </p>
               </div>
 
+              
               {/* Card 2 */}
               <div className="group flex flex-col items-start rounded-2xl bg-[#F9F9F9] p-8 text-left transition-all hover:ring-1 hover:ring-blue-100 md:p-12">
                 <div className="mb-8 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 text-sm text-slate-400 md:mb-[42px]">
-                  2
-                </div>
+                2
+              </div>
                 <h3 className="mb-6 text-2xl font-bold leading-tight text-brisk-navy-100 md:text-3xl lg:text-4xl">
                   Understanding Your Needs
                 </h3>
@@ -114,10 +117,7 @@ const AboutSection = () => {
             xmlns="http://www.w3.org/2000/svg"
             className="absolute inset-x-0 bottom-0"
           >
-            <path
-              d="M0 0L720 300L1440 0V300H0V0Z"
-              fill="#FFFFFF"
-            />
+            <path d="M0 0L720 300L1440 0V300H0V0Z" fill="#FFFFFF" />
           </svg>
         </div>
       </div>

@@ -13,7 +13,9 @@ const BusinessSolutions = () => {
     <section id="services">
       <div className="w-full px-5 py-20 md:px-12 md:py-32 lg:py-[120px]">
         <div className="mx-auto max-w-[1920px]">
+
           {/* --- SECTION HEADER --- */}
+<div class="mb-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-[#2348FF] text-sm font-bold text-white">1</div>
           <div className="mb-[100px] md:mb-[160px] flex flex-col items-center text-center">
             {/* Subheading: Inter SemiBold */}
             <span className="mb-4 font-semibold tracking-normal text-[#2348FF] font-['Inter'] font-medium text-[36px] sm:text-[54px] lg:text-[80px]">

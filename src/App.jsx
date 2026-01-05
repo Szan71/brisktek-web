@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutSection from "./components/AboutSection";
 import BusinessSolutions from "./components/BusinessSolutions";
+import WhyChooseUs from "./components/WhyChooseUs";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         </div>
         <AboutSection />
         <BusinessSolutions />
+        <WhyChooseUs />
       </main>
     </div>
   );
