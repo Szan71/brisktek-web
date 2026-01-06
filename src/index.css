@@ -31,3 +31,7 @@ body {
 #root {
     width: 100%;
 }
+
+.bottom--80 {
+    bottom: -80px !important;
+}

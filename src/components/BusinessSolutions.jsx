@@ -11,7 +11,7 @@ const BusinessSolutions = () => {
   return (
     /* Background matches the light grey triangle fill (#F9F9F9) */
     <section id="services">
-      <div className="w-full px-5 py-20 md:px-12 md:py-32 lg:py-[120px]">
+      <div className="px-[5%] py-20 md:py-32 lg:px-[120px] lg:py-40">
         <div className="mx-auto max-w-[1920px]">
 
           {/* --- SECTION HEADER --- */}

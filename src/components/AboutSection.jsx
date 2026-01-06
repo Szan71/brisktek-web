@@ -44,7 +44,7 @@ const AboutSection = () => {
             </span>
           </h2>
 
-          <div className="mx-4 md:mx-12 lg:mx-[120px] my-5 md:my-10 lg:my-[120px]">
+          <div className="mx-2 md:mx-3 lg:mx-4 my-5 md:my-10 lg:my-[120px]">
             {/* Added extra mb-20 md:mb-40 to create space beneath cards */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 mb-20 md:mb-40">
               {/* Card 1 */}
