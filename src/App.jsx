@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import AboutSection from "./components/AboutSection";
 import BusinessSolutions from "./components/BusinessSolutions";
 import WhyChooseUs from "./components/WhyChooseUs";
+import ProcessSection from "./components/ProcessSection"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <AboutSection />
         <BusinessSolutions />
         <WhyChooseUs />
+        <ProcessSection />
       </main>
     </div>
   );
