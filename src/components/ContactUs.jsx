@@ -62,7 +62,7 @@ const ContactUs = () => {
           <h3 className="mb-4 font-['Inter'] text-[42px] font-bold tracking-tight text-[#0B1221] md:text-[64px]">
             Let's Build Smarter, Together.
           </h3>
-          <p className="ml-auto max-w-[500px] text-base font-medium text-slate-500">
+          <p className="ml-auto max-w-[500px] text-base font-medium">
             Get in touch today to see how BriskTek can simplify your technology and help your business grow.
           </p>
         </div>
