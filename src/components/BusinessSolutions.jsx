@@ -142,11 +142,12 @@ const BusinessSolutions = () => {
         <div className="mx-auto max-w-[1920px] relative z-10">
           {/* HEADER */}
           {/* --- SECTION HEADER --- */}
-          <div className="mb-[60px] md:mb-[100px] flex flex-col items-center text-center px-5">
-            {/* Number Circle Badge */}
+          {/* Number Circle Badge */}
             <div className="mb-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10 text-sm font-bold text-white">
               2
             </div>
+          <div className="mb-[60px] md:mb-[100px] flex flex-col items-center text-center px-5">
+            
 
             {/* Subheading: Removed underline as per latest Figma frames */}
             <h1 className="max-w-[1329px] font-['Inter'] font-medium text-[42px] sm:text-[64px] lg:text-[80px] leading-[125%] tracking-[-4px] text-white"

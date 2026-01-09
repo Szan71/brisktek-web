@@ -16,23 +16,14 @@ const WhyChooseUs = () => {
         </div>
       </div>
 
-      {/* --- TRANSITION CONTAINER: IMAGE + ARCH + NAVY BG --- */}
+      {/* --- TRANSITION CONTAINER: IMAGE + ARCH --- */}
       <div className="relative w-full flex flex-col">
-        {/* Top: Background Image */}
-        {/* <div 
-          className="relative h-[450px] w-full md:h-[600px] lg:h-[750px]"
-          style={{
-            backgroundImage: `url(${architecturalBackground})`,
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
-          }}
-        > */}
-
         <img
           src={architecturalBackground}
           alt="IT Consulting"
           className="h-full w-full object-cover"
         />
+        
         {/* THE DOWNWARD POINTED ARCH */}
         <div className="absolute inset-x-0 bottom-0 h-24 w-full md:h-32 lg:h-[220px] z-10">
           <svg
@@ -44,62 +35,65 @@ const WhyChooseUs = () => {
           >
             <path
               d="M0 0L720 220L1440 0V220H0Z"
-              fill="#0B1221" /* brisk-navy-100 */
+              fill="#0B1221"
             />
-            
           </svg>
-
         </div>
-        
 
-        {/* </div> */}
-
-        {/* --- FLOATING CARDS: Fixed Positioning --- */}
-        {/* Positioning logic: 
-            By using 'absolute' and a specific 'bottom' offset, the cards will sit 
-            precisely where the image meets the navy background.
-        */}
-        <div className="absolute inset-x-0 bottom--80 z-20">
+        {/* --- DESKTOP ONLY: FLOATING CARDS --- */}
+        <div className="hidden lg:block absolute inset-x-0 bottom-[-80px] z-20">
           <div className="mx-auto max-w-[1920px] px-[5%] lg:px-[120px]">
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 items-end">
-              {/* Card 1: Innovation */}
-              <div className="flex h-[150px] md:h-[150px] lg:h-[400px] flex-col justify-between rounded-[32px] bg-white p-8 shadow-2xl transition-all hover:scale-[1.02] md:p-10">
-                <h4 className="text-right md:text-[18px] lg:text-[36px] font-bold text-[#0B1221]">
-                  Innovation
-                </h4>
-                <p className="lg:text-[24px] leading-relaxed md:text-[16px]">
-                  We deliver scalable, future-proof technology that evolves with
-                  your business.
+            <div className="grid lg:grid-cols-3 items-end gap-6">
+              <div className="flex lg:h-[400px] flex-col justify-between rounded-[32px] bg-white p-10 shadow-2xl transition-all hover:scale-[1.02]">
+                <h4 className="text-right lg:text-[36px] font-bold text-[#0B1221]">Innovation</h4>
+                <p className="lg:text-[24px] leading-relaxed text-slate-500">
+                  We deliver scalable, future-proof technology that evolves with your business.
                 </p>
               </div>
-
-              {/* Card 2: Reliability */}
-              <div className="flex h-[150px] md:h-[150px] lg:h-[480px] flex-col justify-between rounded-[32px] bg-white p-8 shadow-2xl transition-all hover:scale-[1.02] md:p-10">
-                <h4 className="text-right md:text-[18px] lg:text-[36px] font-bold text-[#0B1221]">
-                  Reliability
-                </h4>
-                <p className="lg:text-[24px] leading-relaxed md:text-[16px]">
+              <div className="flex lg:h-[480px] flex-col justify-between rounded-[32px] bg-white p-10 shadow-2xl transition-all hover:scale-[1.02]">
+                <h4 className="text-right lg:text-[36px] font-bold text-[#0B1221]">Reliability</h4>
+                <p className="lg:text-[24px] leading-relaxed text-slate-500">
                   Seamless operations backed by trusted support.
                 </p>
               </div>
-
-              {/* Card 3: Customer Success */}
-              <div className="flex h-[150px] md:h-[150px] lg:h-[620px] flex-col justify-between rounded-[32px] bg-white p-8 shadow-2xl transition-all hover:scale-[1.02] md:p-10">
-                <h4 className="text-right md:text-[18px] lg:text-[36px] font-bold text-[#0B1221]">
-                  Customer Success
-                </h4>
-                <p className="lg:text-[24px] leading-relaxed md:text-[16px]">
-                  Your growth is our mission. We build partnerships, not just
-                  solutions.
+              <div className="flex lg:h-[620px] flex-col justify-between rounded-[32px] bg-white p-10 shadow-2xl transition-all hover:scale-[1.02]">
+                <h4 className="text-right lg:text-[36px] font-bold text-[#0B1221]">Customer Success</h4>
+                <p className="lg:text-[24px] leading-relaxed text-slate-500">
+                  Your growth is our mission. We build partnerships, not just solutions.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-       <div className="h-24 w-full md:h-32 lg:h-[220px] z-10 bg-[#0B1221]">
-          
+
+      {/* --- MOBILE & MEDIUM ONLY: PLAIN TEXT SECTION --- */}
+      {/* This area only appears on small/medium screens below the arch */}
+      <div className="bg-[#0B1221] px-[5%] py-16 md:px-12 lg:hidden">
+        <div className="flex flex-col gap-12">
+          <div className="border-l-2 border-slate-700 pl-6">
+            <h3 className="mb-2 text-[20px] font-bold uppercase tracking-wider text-white">Innovation</h3>
+            <p className="text-[16px] leading-relaxed text-slate-400">
+              We deliver scalable, future-proof technology that evolves with your business.
+            </p>
+          </div>
+          <div className="border-l-2 border-slate-700 pl-6">
+            <h3 className="mb-2 text-[20px] font-bold uppercase tracking-wider text-white">Reliability</h3>
+            <p className="text-[16px] leading-relaxed text-slate-400">
+              Seamless operations backed by trusted support.
+            </p>
+          </div>
+          <div className="border-l-2 border-slate-700 pl-6">
+            <h3 className="mb-2 text-[20px] font-bold uppercase tracking-wider text-white">Customer Success</h3>
+            <p className="text-[16px] leading-relaxed text-slate-400">
+              Your growth is our mission. We build partnerships, not just solutions.
+            </p>
+          </div>
         </div>
+      </div>
+
+      {/* Spacer to maintain layout height on desktop */}
+      <div className="hidden lg:block h-24 w-full md:h-32 lg:h-[220px] z-10 bg-[#0B1221]"></div>
     </section>
   );
 };
