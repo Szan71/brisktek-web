@@ -4,6 +4,9 @@ import AboutSection from "./components/AboutSection";
 import BusinessSolutions from "./components/BusinessSolutions";
 import WhyChooseUs from "./components/WhyChooseUs";
 import ProcessSection from "./components/ProcessSection"
+import ContactUs from "./components/ContactUs";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
@@ -17,6 +20,8 @@ function App() {
         <BusinessSolutions />
         <WhyChooseUs />
         <ProcessSection />
+        <ContactUs />
+        <Footer />
       </main>
     </div>
   );
