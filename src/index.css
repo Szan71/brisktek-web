@@ -24,8 +24,8 @@ body {
     width: 100%;
     background-color: white;
     font-family: 'Inter' !important;
-    /* This prevents the "boxed" edges by allowing the blur to bleed out */
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 #root {
