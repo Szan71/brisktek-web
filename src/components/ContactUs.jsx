@@ -6,8 +6,8 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // --- 1. HONEYPOT CHECK ---
-    // If a bot fills this hidden field, we stop the execution immediately.
+    // --- 1. HONEYPOT ANTI-SPAM CHECK ---
+    // If a bot fills this hidden field, we stop the submission.
     if (e.target.aG9uZXlwb3Q.value !== "") {
       return; 
     }
@@ -16,14 +16,14 @@ const ContactUs = () => {
     const formData = new FormData(e.target);
 
     try {
-      // --- 2. SUBMIT TO ZOHO ---
+      // --- 2. SUBMIT DIRECTLY TO ZOHO ---
       await fetch("https://crm.zoho.com/crm/WebToLeadForm", {
         method: "POST",
-        mode: "no-cors", // Bypasses CORS for direct browser-to-Zoho submission
+        mode: "no-cors", // Essential to bypass CORS for Zoho's public endpoint
         body: formData
       });
 
-      setStatus('Success! Your vision is now shared with BriskTek.');
+      setStatus('Success! Your message has been sent to BriskTek.');
       e.target.reset();
     } catch (error) {
       console.error("Submission error:", error);
@@ -42,9 +42,9 @@ const ContactUs = () => {
           
           <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 md:grid-cols-2">
             
-            {/* --- NEW ZOHO SECURITY TOKENS (from your new source code) --- */}
-            <input type="hidden" name="xnQsjsdp" value="10ddd4ae503d076d2fd8410d468bf77c99c1ae2e5d9d7d3225f39a30eaa63ef7" />
-            <input type="hidden" name="xmIwtLD" value="9cdd07367227f8a66aa53885241214ff6448ff5ed4f45544fa9134341e5d1d0ea2c28c0c08bc6f829745101a97589f35" />
+            {/* --- LATEST ZOHO SECURITY TOKENS --- */}
+            <input type="hidden" name="xnQsjsdp" value="90c5836e0d9174895f4b109fae1f7a7fe48401e95e2123f0f55ba9a854acf246" />
+            <input type="hidden" name="xmIwtLD" value="7f13b463d844fc94e3c84c480816430cdbc4e1b64aec16098ff31b70fdf43f3b49ecc685c262496f52ad23bd111f57ee" />
             <input type="hidden" name="actionType" value="TGVhZHM=" />
             <input type="hidden" name="returnURL" value="null" />
 
@@ -63,7 +63,7 @@ const ContactUs = () => {
               <input 
                 name="First Name" 
                 type="text" 
-                placeholder="Enter first name" 
+                placeholder="Enter your first name" 
                 className="rounded-lg bg-slate-800/50 p-4 text-white outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -75,7 +75,7 @@ const ContactUs = () => {
                 required
                 name="Last Name" 
                 type="text" 
-                placeholder="Enter last name" 
+                placeholder="Enter your last name" 
                 className="rounded-lg bg-slate-800/50 p-4 text-white outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -86,7 +86,7 @@ const ContactUs = () => {
               <input 
                 name="Email"
                 type="email" 
-                placeholder="Enter email address" 
+                placeholder="email@example.com" 
                 className="rounded-lg bg-slate-800/50 p-4 text-white outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -97,28 +97,31 @@ const ContactUs = () => {
               <input 
                 name="Phone"
                 type="tel" 
-                placeholder="Enter phone number" 
+                placeholder="Enter your phone number" 
                 className="rounded-lg bg-slate-800/50 p-4 text-white outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             
-            {/* Description (Message) */}
+            {/* Description (mapped to Message) */}
             <div className="flex flex-col md:col-span-2">
               <label className="mb-2 text-sm font-medium text-slate-400">Brief Message</label>
               <textarea 
                 name="Description"
                 rows="4" 
-                placeholder="Write your message here" 
+                placeholder="How can we help your business?" 
                 className="rounded-lg bg-slate-800/50 p-4 text-white outline-none focus:ring-2 focus:ring-blue-500"
               ></textarea>
             </div>
             
             <div className="md:col-span-2 flex flex-col gap-4">
-              <button className="w-fit rounded-lg bg-blue-600 px-8 py-4 font-bold text-white transition-all hover:bg-blue-700 active:scale-95">
+              <button 
+                type="submit" 
+                className="w-fit rounded-lg bg-blue-600 px-8 py-4 font-bold text-white transition-all hover:bg-blue-700 active:scale-95"
+              >
                 Submit
               </button>
               {status && (
-                <p className={`text-sm font-medium ${status.includes('Error') || status.includes('wrong') ? 'text-red-400' : 'text-blue-400'}`}>
+                <p className={`text-sm font-medium ${status.includes('wrong') ? 'text-red-400' : 'text-blue-400'}`}>
                   {status}
                 </p>
               )}
